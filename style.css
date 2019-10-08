@@ -136,16 +136,13 @@ section {
     }
 
     header>h1 {
+        font-size: 1.5em;
         margin-right: 15%;
         margin-left: 20%;
     }
 
-    header>h1 {
-        font-size: 1.1em;
-    }
-
     header>h2 {
-        font-size: 1.1em;
+        font-size: 1.5em;
     }
 
     .catalogue button {
@@ -192,7 +189,15 @@ section {
         flex-wrap: nowrap;
         justify-content: space-around;
     }
+    header>h1 {
+        font-size: 4em;
+        margin-right: 15%;
+        margin-left: 20%;
+    }
 
+    header>h2 {
+        font-size: 1.9em;
+    }
     .catalogue {
         justify-content: space-between;
         overflow-x: hidden;
