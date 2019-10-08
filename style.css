@@ -1,95 +1,112 @@
 body {
-    /* background-image: url("img/montreal/1.jpg") */
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 20px;
 }
 
+/* --------------- */
+/*     HEADER      */
+/* --------------- */
 header {
     background-color: white;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: rgb(98, 154, 223);
-    border: 1px solid black;
-    overflow-x: scroll;
-    margin-top: 20px;
+    width: 100%;
+    /* border: 1px solid black; */
 }
 
 header>h1 {
-    font-size: 1.5em;
     margin-top: 0px;
-    margin-right: 15%;
-    margin-left: 20%;
-    border: 1px solid black;
 }
 
 header>h2 {
-    font-size: 1.5em;
     margin-top: 0px;
     margin-left: 5%;
-    border: 1px solid black;
 }
 
-.catalogue{
-height: 60px;
+/* --------------- */
+/*     SECTION     */
+/* --------------- */
+section {
+    display: flex;
+    /* background-color: rgb(98, 154, 223); */
+    /* border: 1px solid black; */
+    margin-top: 10px;
 }
 
-.vignette {
-    height: 100px;
+/* ------------------------------------ */
+/*  BOX VIGNETTE + BOX IMG FULSCREEN    */
+/* ------------------------------------ */
+.VignFull {
+    display: flex;
+    /* border: 1px solid black; */
 }
 
-.maximize {
-    flex-direction: column;
-    height: 100%;
-    overflow: unset;
+/* --------------- */
+/*   CATALOGUE    */
+/* --------------- */
+.catalogue {
+    background-color: rgb(7, 6, 6);
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    align-items: center;
+    height: 70px;
 }
 
-section>div {
-    border: 1px solid blue;
+.catalogue button{
+    border-radius:2px;
     background-color: rgb(202, 196, 196);
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-section img{
-    height: 100px;
-}
-
-
-
-.catalogue>div {
-    width: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
     height: 40px;
 }
-
-section>div>p {
-    margin-top: 10px;
+/* --------------- */
+/*    VIGNETTTE    */
+/* --------------- */
+.vignette {
+    align-items: center;
 }
 
-
-.maximize p{
- border: 1px solid white;
+.vignette img {
+    box-shadow:5px 5px 10px 2px rgba(8, 8, 8, 0.582);
+    border:1px dashed gray ;
+    border-radius: 100px;
+    height: 80%;
+    width: 80%;
 }
+
+/* --------------- */
+/*    MAXIMIZE    */
+/* --------------- */
+.maximize {
+    flex-direction: column;
+    padding: 10px;
+    /* box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);  */
+}
+
+.maximize>p {
+    padding: 10px;
+    border: 1px solid white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 1.3em;
+}
+
 .maximize>div {
-    background-color: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 300px;
+
 }
 
 .maximize>div>img {
-
-    height: 100%;
-
+    box-shadow: 5px 5px 10px 2px rgba(8, 8, 8, 0.582);
+    border-radius: 3px;
+    width: 98%;
 }
 
 /*----------------------------------------------------------- */
@@ -101,3 +118,108 @@ section>div>p {
                     @media(min-width:992px){}
                     @media(min-width:1200px){} 
 */
+
+@media(max-width:767px) {
+    body {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header>h1 {
+        margin-right: 15%;
+        margin-left: 20%;
+    }
+
+    header>h1 {
+        font-size: 1.1em;
+    }
+
+    header>h2 {
+        font-size: 1.1em;
+    }
+
+    /* ------------------------------------ */
+    /*  BOX VIGNETTE + BOX IMG FULSCREEN    */
+    /* ------------------------------------ */
+    .VignFull {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --------------- */
+    /*    VIGNETTTE    */
+    /* --------------- */
+    .vignette {
+        flex-direction: row;
+        overflow-x: scroll;
+        white-space: nowrap;
+        height: 150px;
+        /* padding:10px; */
+    }
+
+    .vignette>img {
+        margin-right: 10px;
+    }
+
+    /* ------------------------------------ */
+    /* ------------------------------------ */
+
+    /* --------------- */
+    /*    MAXIMIZE     */
+    /* --------------- */
+    .maximize>p {
+        font-size: 1.3em;
+        max-height: 92px;
+    }
+}
+
+@media(min-width:768px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .catalogue {
+        justify-content: space-between;
+        /* overflow-x: hidden; */
+    }
+
+    /* ------------------------------------ */
+    /*  BOX VIGNETTE + BOX IMG FULSCREEN    */
+    /* ------------------------------------ */
+    .VignFull {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .vignette {
+        flex-direction: column;
+        overflow-y: scroll;
+        white-space: nowrap;
+        min-width: 300px;
+    }
+
+    .vignette img {
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+
+    /* --------------- */
+    /*    MAXIMIZE     */
+    /* --------------- */
+
+    .maximize>p {
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+    }
+}
+
+@media(min-width:992px) {}
