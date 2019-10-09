@@ -8,58 +8,57 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT|Teko&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <!-- <script type="text/javascript" src="javascript.js"></script> -->
+    <link rel="stylesheet" href="animate.css" type="text/css">
+    <script type="text/javascript" src="javascript.js"></script>
     <title>Exercice</title>
 </head>
 
 <body>
-        <div class="fly">
-                <img src="img/pap.png" alt="">
-            </div>
+    <div class="fly">
+        <p></p>
+        <img src="img/pap.png" alt="">
+
+    </div>
     <header>
         <h2>MyPictureBox.fr</h2>
         <h1>La PictureBox d'Eric</h1>
     </header>
 
     <section class="catalogue">
-        <button>Venise 08/12</button>
-        <button>Montreal 01/13</button>
-        <button>Munich 06/13</button>
-        <button>Paris 07/13</button>
-        <button>Nice 02/14</button>
-        <button>Lisbonne 07/14</button>
+        <button onclick="infoTarget();">Venise</button>
+        <button onclick="infoTarget();">Montreal</button>
+        <button onclick="infoTarget();">Munich</button>
+        <button onclick="infoTarget();">Paris</button>
+        <button onclick="infoTarget();">Nice</button>
+        <button onclick="infoTarget();">Lisbonne</button>
     </section>
 
     <section class="VignFull">
         <section class="vignette">
-            <img src="img/venise/small/1.jpg" alt="" onclick="imgVenise('img/venise/large/1.jpg');">
-            <img src="img/venise/small/2.jpg" alt="" onclick="imgVenise('img/venise/large/2.jpg');">
-            <img src="img/venise/small/3.jpg" alt="" onclick="imgVenise('img/venise/large/3.jpg');">
-            <img src="img/venise/small/4.jpg" alt="" onclick="imgVenise('img/venise/large/5.jpg');">
-            <img src="img/venise/small/5.jpg" alt="">
-            <img src="img/venise/small/6.jpg" alt="">
-            <img src="img/venise/small/7.jpg" alt="">
-            <img src="img/venise/small/8.jpg" alt="">
-            <img src="img/venise/small/9.jpg" alt="">
-            <img src="img/venise/small/10.jpg" alt="">
-            <img src="img/venise/small/11.jpg" alt="">
+            <img src="img/venise/1.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/2.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/3.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/4.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/5.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/6.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/7.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/8.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/9.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/10.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/11.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/12.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/13.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/14.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/15.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/16.jpg" alt="" onclick="affichImg();">
+            <img src="img/venise/17.jpg" alt="" onclick="affichImg();">
 
-            <img src="img/venise/small/1.jpg" alt="">
-            <img src="img/venise/small/2.jpg" alt="">
-            <img src="img/venise/small/3.jpg" alt="">
-            <img src="img/venise/small/4.jpg" alt="">
-            <img src="img/venise/small/5.jpg" alt="">
-            <img src="img/venise/small/6.jpg" alt="">
-            <img src="img/venise/small/7.jpg" alt="">
-            <img src="img/venise/small/8.jpg" alt="">
-            <img src="img/venise/small/9.jpg" alt="">
-            <img src="img/venise/small/10.jpg" alt="">
         </section>
 
         <section class="maximize">
             <p>Lorem ipsum dolor sit.</p>
             <div>
-                <img src="img/venise/large/5.jpg" alt="" id="fullImg">
+                <img src="img/venise/1.jpg" alt="" id="fullImg">
             </div>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi minima laboriosam, dolorum ut
                 reprehenderit dignissimos quisquam, saepe facere corporis mollitia non? Tempore, voluptatem voluptas?
@@ -71,13 +70,6 @@
         </section>
     </section>
 
-
-    <script type="text/javascript" src="javascript.js">
-        function imgVenise(nom) {
-            var fullImg = document.getElementById("fullImg");
-            console.log;
-        }
-    </script>
 </body>
 
 </html>
