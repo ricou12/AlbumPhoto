@@ -12,10 +12,11 @@ body {
     font-size: 1.5em;
 }
 .fly p{
+    color:darkred;
     margin: 0px ;
 }
 .fly:hover {
-    --douxPapillon: 0.8s;
+    --douxPapillon: 1.2s;
 }
 
 .fly:hover p::after {
