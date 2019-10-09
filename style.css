@@ -65,6 +65,7 @@ header>h2 {
 /*     SECTION     */
 /* --------------- */
 section {
+    /* Toutes les sections seront des conteneurs flexible */
     display: flex;
     margin-top: 10px;
 }
@@ -72,9 +73,9 @@ section {
 /* ------------------------------------ */
 /*  BOX VIGNETTE + BOX IMG FULSCREEN    */
 /* ------------------------------------ */
-.VignFull {
+/* .VignFull {
     display: flex;
-}
+} */
 
 /* --------------- */
 /*   CATALOGUE    */
@@ -98,7 +99,7 @@ section {
 }
 
 /* --------------- */
-/*    VIGNETTTE    */
+/*    VIGNETTTES    */
 /* --------------- */
 .vignette {
     align-items: center;
@@ -116,8 +117,9 @@ section {
 }
 
 /* --------------- */
-/*    MAXIMIZE    */
+/*    MAXIMIZE  (Zoom de l'image sélectionnée)   */
 /* --------------- */
+
 .maximize {
     flex-direction: column;
     padding: 10px;
@@ -139,7 +141,6 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-
 }
 
 .maximize>div>img {
@@ -220,7 +221,7 @@ section {
 }
 
 /*----------------------------------------------------------- */
-/*                    Media Queries CSS3     (Tablette)                 */
+/*            Media Queries CSS3     (Tablette)               */
 /* ---------------------------------------------------------- */
 @media(min-width:768px) {
     header {
