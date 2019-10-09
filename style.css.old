@@ -1,5 +1,4 @@
 body {
-    position relative;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -15,51 +14,8 @@ header {
     width: 100%;
 }
 
-.fly {
-    position: absolute;
-    animation: dpl 10s alternate infinite;
-}
-
-@keyframes dpl {
-    0% {
-        transform: rotate(5deg);
-        top: 0%;
-        left: 0%;
-    }
-
-    10% {
-        transform: rotate(10deg);
-        top: 25%;
-        left: 30%;
-    }
-
-    20% {
-        transform: rotate(40deg);
-        top: 30%;
-        left: 20%;
-    }
-
-    25% {
-        transform: rotate(90deg);
-        top: 55%;
-        left:60%;
-    }
-
-    90% {
-        transform: rotate(180deg);
-        top: 40%;
-        left:0%;
-    }
-
-    100% {
-        transform: rotate(0deg);
-        top: 20%;
-        left: 30%;
-    }
-
-}
-
-.fly>img {
+header>img {
+    height:60%;
     width: auto;
     margin-left: 50px;
     animation: papillon 2s alternate infinite;
@@ -67,8 +23,7 @@ header {
 
 @keyframes papillon {
     0% {
-
-        transform: scale(1.0) rotatey(45deg);
+        transform: scale(1.06) rotatey(45deg);
     }
 
     20% {
@@ -76,19 +31,19 @@ header {
     }
 
     40% {
-        transform: scale(1.15) rotatey(120deg);
+        transform: scale(1.04) rotatey(45deg);
     }
 
     60% {
-        transform: scale(1.2) rotatey(90deg);
+        transform: scale(1.03) rotatey(90deg);
     }
 
     80% {
-        transform: scale(1.15) rotatey(180deg);
+        transform: scale(1.02) rotatey(10deg);
     }
 
     100% {
-        transform: scale(1.1) rotatey(90deg);
+        transform: scale(1.01) rotatey(180deg);
     }
 
 }
