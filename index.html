@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Poiret+One&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT|Teko&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- <script type="text/javascript" src="javascript.js"></script> -->
     <title>Exercice</title>
 </head>
 
 <body>
     <header>
+        <img src="img/pap.png" alt="">
         <h2>MyPictureBox.fr</h2>
         <h1>La PictureBox d'Eric</h1>
     </header>
@@ -28,16 +30,17 @@
 
     <section class="VignFull">
         <section class="vignette">
-            <img src="img/venise/small/1.jpg" alt="">
-            <img src="img/venise/small/2.jpg" alt="">
-            <img src="img/venise/small/3.jpg" alt="">
-            <img src="img/venise/small/4.jpg" alt="">
+            <img src="img/venise/small/1.jpg" alt="" onclick="imgVenise('img/venise/large/1.jpg');">
+            <img src="img/venise/small/2.jpg" alt="" onclick="imgVenise('img/venise/large/2.jpg');">
+            <img src="img/venise/small/3.jpg" alt="" onclick="imgVenise('img/venise/large/3.jpg');">
+            <img src="img/venise/small/4.jpg" alt="" onclick="imgVenise('img/venise/large/5.jpg');">
             <img src="img/venise/small/5.jpg" alt="">
             <img src="img/venise/small/6.jpg" alt="">
             <img src="img/venise/small/7.jpg" alt="">
             <img src="img/venise/small/8.jpg" alt="">
             <img src="img/venise/small/9.jpg" alt="">
             <img src="img/venise/small/10.jpg" alt="">
+            <img src="img/venise/small/11.jpg" alt="">
 
             <img src="img/venise/small/1.jpg" alt="">
             <img src="img/venise/small/2.jpg" alt="">
@@ -54,7 +57,7 @@
         <section class="maximize">
             <p>Lorem ipsum dolor sit.</p>
             <div>
-                <img src="img/venise/large/5.jpg" alt="">
+                <img src="img/venise/large/5.jpg" alt="" id="fullImg">
             </div>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi minima laboriosam, dolorum ut
                 reprehenderit dignissimos quisquam, saepe facere corporis mollitia non? Tempore, voluptatem voluptas?
@@ -66,6 +69,13 @@
         </section>
     </section>
 
+
+    <script type="text/javascript" src="javascript.js">
+        function imgVenise(nom) {
+            var fullImg = document.getElementById("fullImg");
+            console.log;
+        }
+    </script>
 </body>
 
 </html>

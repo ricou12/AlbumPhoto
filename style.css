@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* --------------- */
@@ -13,7 +12,40 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* border: 1px solid black; */
+}
+
+header>img {
+    height:60%;
+    width: auto;
+    margin-left: 50px;
+    animation: papillon 2s alternate infinite;
+}
+
+@keyframes papillon {
+    0% {
+        transform: scale(1.06) rotatey(45deg);
+    }
+
+    20% {
+        transform: scale(1.05) rotatey(90deg);
+    }
+
+    40% {
+        transform: scale(1.04) rotatey(45deg);
+    }
+
+    60% {
+        transform: scale(1.03) rotatey(90deg);
+    }
+
+    80% {
+        transform: scale(1.02) rotatey(10deg);
+    }
+
+    100% {
+        transform: scale(1.01) rotatey(180deg);
+    }
+
 }
 
 header>h1 {
@@ -34,8 +66,6 @@ header>h2 {
 /* --------------- */
 section {
     display: flex;
-    /* background-color: rgb(98, 154, 223); */
-    /* border: 1px solid black; */
     margin-top: 10px;
 }
 
@@ -44,7 +74,6 @@ section {
 /* ------------------------------------ */
 .VignFull {
     display: flex;
-    /* border: 1px solid black; */
 }
 
 /* --------------- */
@@ -78,9 +107,12 @@ section {
 .vignette img {
     box-shadow: 5px 5px 10px 2px rgba(8, 8, 8, 0.582);
     border: 1px dashed gray;
-    border-radius: 100px;
-    height: 80%;
-    width: 80%;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.vignette img:hover {
+    transform: scale(0.8) rotatex(20deg);
 }
 
 /* --------------- */
@@ -89,10 +121,12 @@ section {
 .maximize {
     flex-direction: column;
     padding: 10px;
-    /* box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);  */
 }
 
 .maximize>p {
+    font-family: 'Lobster', cursive;
+    font-family: 'Teko', sans-serif;
+    font-family: 'Old Standard TT', serif;
     padding: 10px;
     border: 1px solid white;
     overflow-y: scroll;
@@ -123,6 +157,10 @@ section {
                     @media(min-width:992px){}
                     @media(min-width:1200px){} 
 */
+
+/*----------------------------------------------------------- */
+/*              Media Queries CSS3 (mobile)             */
+/* ---------------------------------------------------------- */
 
 @media(max-width:767px) {
     body {
@@ -165,13 +203,12 @@ section {
         overflow-x: scroll;
         white-space: nowrap;
         height: 150px;
-        /* padding:10px; */
     }
 
     .vignette>img {
         margin-right: 10px;
+        height: 80%;
     }
-
 
     /* --------------- */
     /*    MAXIMIZE     */
@@ -183,7 +220,7 @@ section {
 }
 
 /*----------------------------------------------------------- */
-/*                    Media Queries CSS3                      */
+/*                    Media Queries CSS3     (Tablette)                 */
 /* ---------------------------------------------------------- */
 @media(min-width:768px) {
     header {
@@ -224,18 +261,18 @@ section {
         overflow-y: scroll;
         white-space: nowrap;
         min-width: 300px;
+        width: 400px;
+        height: 700px;
     }
 
     .vignette img {
-        margin-top: 20px;
-        margin-left: 20px;
-
+        margin-top: 10px;
+        width: 80%;
     }
 
     /* --------------- */
     /*    MAXIMIZE     */
     /* --------------- */
-
     .maximize>p {
         overflow-y: scroll;
         overflow-x: hidden;
@@ -244,7 +281,7 @@ section {
 }
 
 /*----------------------------------------------------------- */
-/*                    Media Queries CSS3                      */
+/*                    Media Queries CSS3  (PC)                    */
 /* ---------------------------------------------------------- */
 @media(min-width:992px) {
     header>h1 {
@@ -255,5 +292,17 @@ section {
 
     header>h2 {
         font-size: 1.9em;
+    }
+
+    .vignette {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-width: 600px;
+        height: 900px;
+    }
+
+    .vignette img {
+        width: 45%;
     }
 }
