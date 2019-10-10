@@ -13,6 +13,9 @@ var infoPath = {
     // ]  
 };
 
+var liste=[1,2,4,3,6,7];
+
+
 function infoTarget() {
     var Target = event.target;
     // debugger;
